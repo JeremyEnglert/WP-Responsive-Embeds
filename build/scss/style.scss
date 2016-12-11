@@ -1,0 +1,12 @@
+/******************************************************************
+	
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here is where you import
+all of your Sass files so they can compile into one
+CSS file. 
+
+******************************************************************/
+// Import foundation.scss from vendor files
+@import "../../node_modules/foundation-sites/scss/foundation";
+@include foundation-flex-video;
