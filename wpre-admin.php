@@ -26,7 +26,7 @@ class WPRE_Admin_Settings {
 	}
 	
 	public function setup_fields() {
-    	add_settings_field( 'auto_embed_field', 'Automatic Responsive Embeds', array( $this, 'auto_embed_callback' ), 'wp_responsive_embeds', 'plugin_settings_section' );
+    	add_settings_field( 'auto_embed_field', 'Disable Automatic Responsive Embeds', array( $this, 'auto_embed_callback' ), 'wp_responsive_embeds', 'plugin_settings_section' );
     	register_setting( 'wp_responsive_embeds', 'auto_embed_field' );
 	}
 	
@@ -44,7 +44,7 @@ class WPRE_Admin_Settings {
 	            <?php settings_fields( 'wp_responsive_embeds' );
 	                do_settings_sections( 'wp_responsive_embeds' ); ?>
 	                <h3>Using the Shortcode</h3>
-	                <div>If you do not utilize the automatic responsive embeds, you will need to wrap items in the [wpre] shortcode. For example [wpre] EMBED TEXT HERE [/wpre].</div>
+	                <div>If you disable automatic responsive embeds, you will need to wrap items in the [wpre] shortcode. For example [wpre] EMBED TEXT HERE [/wpre].</div>
 	                <?php submit_button();?>
 			</form>
 		</div> <?php
