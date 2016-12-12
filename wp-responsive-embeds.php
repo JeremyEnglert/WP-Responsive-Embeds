@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: WP Responsive Embeds
-Plugin URI: 
-Description: 
-Version: .5
+Plugin URI: https://github.com/JeremyEnglert/WP-Responsive-Embeds
+Description: Automatically wrap embedded content from YouTube, Vimeo, Google Maps and other iFrames in a flexible, responsive container to ensure embeds maintain the correct aspect ratio regardless of screen size.
+Version: 1.0
 Author: Jeremy Englert
 Author URI: http://jointswp.com
 License: GPLv2 or later
@@ -12,8 +12,8 @@ License: GPLv2 or later
 // Get admin settings
 $auto_embeds = get_option( 'auto_embed_field' );
 
-// If auto embeds are enabled, load the JS to make this happen
-if ( 1 == $auto_embeds ) {
+// Unless auto embeds are disabled, load the JS
+if ( 1 != $auto_embeds ) {
     wp_enqueue_script( 'wpre-js', plugin_dir_url( __FILE__ ) . 'assets/js/scripts.js', array( 'jquery' ), '', true );
 } 
 
