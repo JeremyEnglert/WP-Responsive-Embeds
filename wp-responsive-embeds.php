@@ -6,7 +6,20 @@ Description: Automatically wrap embedded content from YouTube, Vimeo, Google Map
 Version: 1.0
 Author: Jeremy Englert
 Author URI: http://jointswp.com
-License: GPLv2 or later
+License: GPLv2 & MIT
+
+WP Responsive Embeds is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+any later version.
+
+Some parts of the Scss/CSS files are from ZURB Foundation and
+published under the MIT license. 
+ 
+WP Responsive Embeds is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
 */
 
 // Get admin settings
