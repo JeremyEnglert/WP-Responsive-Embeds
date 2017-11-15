@@ -27,11 +27,15 @@ $auto_embeds = get_option( 'auto_embed_field' );
 
 // Unless auto embeds are disabled, load the JS
 if ( 1 != $auto_embeds ) {
-    wp_enqueue_script( 'wpre-js', plugin_dir_url( __FILE__ ) . 'assets/js/scripts.js', array( 'jquery' ), '', true );
+    add_action('wp_enqueue_scripts', function(){
+        wp_enqueue_script( 'wpre-js', plugin_dir_url( __FILE__ ) . 'assets/js/scripts.js', array( 'jquery' ), '', true );
+    });
 } 
 
 // Load styles
-wp_enqueue_style( 'wpre-css', plugin_dir_url( __FILE__ ) . 'assets/css/style.css', array(), 'all' );
+add_action('wp_enqueue_scripts', function(){
+    wp_enqueue_style( 'wpre-css', plugin_dir_url( __FILE__ ) . 'assets/css/style.css', array(), 'all' );
+});
 
 require_once('wpre-admin.php'); 
 require_once('wpre-shortcode.php'); 
